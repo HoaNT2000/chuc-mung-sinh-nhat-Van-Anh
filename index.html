@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <style>
         :root {
-            --readTime: 30s
+            --readTime: 55s
         }
     </style>
     <link rel="stylesheet" href="index.3804edd5.css">
@@ -27,6 +27,7 @@
     <link rel="manifest" href="resources/favicon/site.webmanifest">
     <script src="index.fc62b9d1.js" type="module" defer></script>
     <script src="index.46f3a471.js" defer nomodule=""></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script>
         document.addEventListener('copy', function (e) {
             e.preventDefault();
@@ -66,17 +67,19 @@
                 </div>
             </div>
             <div class="HBD-text">
-                <p class="HBD">Wish you a very happy birthday</p>
-                <p class="nickname">Vân Anh</p>
+                <p class="HBD"><span style="color: pink">Wish</span> <span style="color: lightblue">you</span> <span
+                        style="color: lightgreen">a</span> <span style="color: yellow">very</span> <span
+                        style="color: peachpuff">happy</span> <span style="color: lightseagreen">birthday</span></p>
+                <p class="nickname" style="color: rgb(226, 12, 12);">Vân Anh</p>
             </div>
         </div>
         <div class="frame frame2">
             <div class="scroll">
-                <div class="text">
-                    <p>Today is a special day for someone special, a little girl with the brightest and most beautiful
+                <div class="text" id="mytext">
+                    <!-- <p>Today is a special day for someone special, a little girl with the brightest and most beautiful
                         smile in my heart. I hope that you will always be happy and cheerful, always smiling brightly.
                         Happy birthday to Van Anh – the gentlest and sweetest girl, I have ever met! <span
-                            style="color: red;">&#10084; &#10084; &#10084;</span> Mon amour</p>
+                            style="color: red;">&#10084; &#10084; &#10084;</span> Mon amour</p> -->
                 </div>
             </div>
         </div>
@@ -102,8 +105,31 @@
             <p class="bb-text">Why is it so dark here?</p>
             <p class="bb-text"> <span class="name">Vân Anh</span>! Can you please switch on the lights? </p>
         </div>
-        <div class="btn switch"></div>
+        <div class="btn switch" id="btngif"></div>
         <div class="btn-ref"></div>
+        <script>
+            var btngif = document.getElementById('btngif');
+            var app = document.getElementById('mytext')
+
+            var Typewriter = new Typewriter(app, {
+                loop: false,
+                delay: 90,
+                cursor: '<span style="color: red;">&#10084;</span>',
+            })
+            btngif.onclick = function () {
+                if (btngif.classList.value == 'btn gift') {
+
+                    Typewriter
+                        .pauseFor(3000)
+                        .typeString('Hi <strong>Van Anh</strong>, do you remember what special day it is today ???')
+                        .pauseFor(300)
+                        .deleteChars(60)
+                        .typeString('<span style="color: pink">Today</span> <span style="color: lightblue">is</span> <span style="color: lightgreen">a</span> <span style="color: yellow">special</span> <span style="color: lightcoral">day</span> <span style="color: peachpuff">for</span> <span style="color: lightseagreen">someone</span> <span style="color: lavender">special</span>, <span style="color: lightpink">a</span> <span style="color: lightsalmon">little</span> <span style="color: lightgoldenrodyellow">girl</span> <span style="color: palevioletred">with</span> <span style="color: plum">the</span> <span style="color: powderblue">brightest</span> <span style="color: thistle">and</span> <span style="color: lightcyan">most</span> <span style="color: lightgreen">beautiful</span> <span style="color: lightskyblue">smile</span> <span style="color: lightcoral">in</span> <span style="color: palegoldenrod">my</span> <span style="color: peachpuff">heart</span>. <span style="color: pink">I</span> <span style="color: lightblue">hope</span> <span style="color: lightgreen">that</span> <span style="color: yellow">you</span> <span style="color: lightcoral">will</span> <span style="color: lavender">always</span> <span style="color: lightpink">be</span> <span style="color: lightsalmon">happy</span> <span style="color: lightgoldenrodyellow">and</span> <span style="color: palevioletred">cheerful</span>, <span style="color: plum">always</span> <span style="color: powderblue">smiling</span> <span style="color: thistle">brightly</span>. <span style="color: lightcyan">Happy</span> <span style="color: lightgreen">birthday</span> <span style="color: lightskyblue">to</span> <strong style="color: red">Van Anh</strong> <span style="color: pink">–</span> <span style="color: lightblue">the</span> <span style="color: lightgreen">gentlest</span> <span style="color: yellow">and</span> <span style="color: lightcoral">sweetest</span> <span style="color: peachpuff">girl</span>, <span style="color: lightseagreen">I</span> <span style="color: lavender">have</span> <span style="color: lightpink">ever</span> <span style="color: lightsalmon">met</span>! <span style="color: red;">&#10084; &#10084; &#10084;</span> <strong style="color:red">Mon amour</strong></p>')
+                        .pauseFor(1000)
+                        .start()
+                }
+            };
+        </script>
     </div>
 </body>
 
