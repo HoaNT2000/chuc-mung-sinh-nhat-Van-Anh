@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#141852">
     <meta name="msapplication-navbutton-color" content="#141852">
     <meta name="apple-mobile-web-app-status-bar-style" content="#141852">
-    <title>Happy Birthday &#10084; Van Anh</title>
+    <title>Happy Birthday Van Anh</title>
     <meta name="title" content="Happy Birthday to You">
     <meta name="description" content="Wishing you a very Happy Birthday Dear">
     <meta property="og:type" content="website">
@@ -109,22 +109,29 @@
         <div class="btn-ref"></div>
         <script>
             var btngif = document.getElementById('btngif');
-            var app = document.getElementById('mytext')
+            var app = document.getElementById('mytext');
+            var docTitle = document.title;
+            window.addEventListener("blur", () => {
+                document.title = "Come back, please 🥺"
+            })
 
+            window.addEventListener("focus", () => {
+                document.title = docTitle
+            })
             var Typewriter = new Typewriter(app, {
                 loop: false,
                 delay: 90,
-                cursor: '<span style="color: red;">&#10084;</span>',
+                cursor: '<span style="color: yellow;">&#128393;</span>',
             })
             btngif.onclick = function () {
                 if (btngif.classList.value == 'btn gift') {
 
                     Typewriter
                         .pauseFor(3000)
-                        .typeString('Hi <strong>Van Anh</strong>, do you remember what special day it is today ???')
+                        .typeString('Hi <strong style="color:red;">Van Anh</strong>, do you remember what special day it is today ???')
                         .pauseFor(300)
-                        .deleteChars(60)
-                        .typeString('<span style="color: pink">Today</span> <span style="color: lightblue">is</span> <span style="color: lightgreen">a</span> <span style="color: yellow">special</span> <span style="color: lightcoral">day</span> <span style="color: peachpuff">for</span> <span style="color: lightseagreen">someone</span> <span style="color: lavender">special</span>, <span style="color: lightpink">a</span> <span style="color: lightsalmon">little</span> <span style="color: lightgoldenrodyellow">girl</span> <span style="color: palevioletred">with</span> <span style="color: plum">the</span> <span style="color: powderblue">brightest</span> <span style="color: thistle">and</span> <span style="color: lightcyan">most</span> <span style="color: lightgreen">beautiful</span> <span style="color: lightskyblue">smile</span> <span style="color: lightcoral">in</span> <span style="color: palegoldenrod">my</span> <span style="color: peachpuff">heart</span>. <span style="color: pink">I</span> <span style="color: lightblue">hope</span> <span style="color: lightgreen">that</span> <span style="color: yellow">you</span> <span style="color: lightcoral">will</span> <span style="color: lavender">always</span> <span style="color: lightpink">be</span> <span style="color: lightsalmon">happy</span> <span style="color: lightgoldenrodyellow">and</span> <span style="color: palevioletred">cheerful</span>, <span style="color: plum">always</span> <span style="color: powderblue">smiling</span> <span style="color: thistle">brightly</span>. <span style="color: lightcyan">Happy</span> <span style="color: lightgreen">birthday</span> <span style="color: lightskyblue">to</span> <strong style="color: red">Van Anh</strong> <span style="color: pink">–</span> <span style="color: lightblue">the</span> <span style="color: lightgreen">gentlest</span> <span style="color: yellow">and</span> <span style="color: lightcoral">sweetest</span> <span style="color: peachpuff">girl</span>, <span style="color: lightseagreen">I</span> <span style="color: lavender">have</span> <span style="color: lightpink">ever</span> <span style="color: lightsalmon">met</span>! <span style="color: red;">&#10084; &#10084; &#10084;</span> <strong style="color:red">Mon amour</strong></p>')
+                        .deleteChars(50)
+                        .typeString('. <span style="color: pink">Today</span> <span style="color: lightblue">is</span> <span style="color: lightgreen">the</span> <span style="color: lavender">most</span> <span style="color: yellow">special</span> <span style="color: lightcoral">day</span>, <span style="color: lightpink">a</span> <span style="color: lightsalmon">little</span> <span style="color: lightgoldenrodyellow">girl</span> <span style="color: palevioletred">with</span> <span style="color: plum">the</span> <span style="color: powderblue">brightest</span> <span style="color: thistle">and</span> <span style="color: lightcyan">most</span> <span style="color: lightgreen">beautiful</span> <span style="color: lightskyblue">smile</span> <span style="color: lightcoral">in</span> <span style="color: palegoldenrod">my</span> <span style="color: peachpuff">heart</span>. <span style="color: pink">I</span> <span style="color: lightblue">hope</span> <span style="color: lightgreen">that</span> <span style="color: yellow">you</span> <span style="color: lightcoral">will</span> <span style="color: lavender">always</span> <span style="color: lightpink">be</span> <span style="color: lightsalmon">happy</span> <span style="color: lightgoldenrodyellow">and</span> <span style="color: palevioletred">cheerful</span>, <span style="color: plum">always</span> <span style="color: powderblue">smiling</span> <span style="color: thistle">brightly</span>. <span style="color: lightcyan">Happy</span> <span style="color: lightgreen">birthday</span> <span style="color: lightskyblue">to</span> <strong style="color: red">Van Anh</strong> <span style="color: pink">–</span> <span style="color: lightblue">the</span> <span style="color: lightgreen">gentlest</span> <span style="color: yellow">and</span> <span style="color: lightcoral">sweetest</span> <span style="color: peachpuff">girl</span>, <span style="color: lightseagreen">I</span> <span style="color: lavender">have</span> <span style="color: lightpink">ever</span> <span style="color: lightsalmon">met</span>! <span style="color: red;">&#129395; &#129395; &#129395;</span> <strong style="color:red">Mon amour</strong></p>')
                         .pauseFor(1000)
                         .start()
                 }
